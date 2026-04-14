@@ -34,4 +34,9 @@ const criarBanco = async() => {
     } else {
         console.log(`Banco de dados pronto com ${check.total} abrigos cadastrados`);
     }
+
+
+    return db;
 };
+
+module.exports = {criarBanco};
