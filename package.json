@@ -1,0 +1,30 @@
+{
+  "name": "abrigoagora",
+  "version": "1.0.0",
+  "description": "Durante enchentes, a comunicação entre abrigos e desabrigados é ineficiente. Enquanto locais conhecidos (como escolas centrais) ficam superlotados rapidamente, abrigos periféricos ou menores permanecem com vagas ociosas. Isso gera deslocamentos perigosos, cansaço extremo e exposição desnecessária de famílias, pois não há uma base de dados centralizada e atualizada em tempo real.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stumpf-alexandre/abrigoAgora.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/stumpf-alexandre/abrigoAgora/issues"
+  },
+  "homepage": "https://github.com/stumpf-alexandre/abrigoAgora#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
