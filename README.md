@@ -71,6 +71,8 @@ database.db
 |qtd_desabrigados         |Quantidade de pessoas que já estão no abrigo          |
 |genero                   |Qual o tipo de pessoa o abrigo aceita                 |
 |pet-friendly             |Se o abrigo acolhe os animais dos desabrigados        |
+|acessibilidade           |Qual acessibilidade o abrigo apresenta                |
+|pet                      |Se o abrigo aceita pet                                |
 
 ---
 
