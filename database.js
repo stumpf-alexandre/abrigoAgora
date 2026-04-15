@@ -35,6 +35,11 @@ const criarBanco = async() => {
         console.log(`Banco de dados pronto com ${check.total} abrigos cadastrados`);
     }
 
+    const todosAbrigos = await db.all(`
+        SELECT * FROM abrigos    
+    `);
+    console.table(todosAbrigos);
+
 
     return db;
 };
