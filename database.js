@@ -46,6 +46,19 @@ const criarBanco = async() => {
     `);
     console.table(abrigoEspecifico);
 
+    await db.run(`
+        UPDATE abrigos
+        SET pet = true
+        WHERE id = 2
+    `);
+    console.log(`Dados atualizados`);
+
+    await db.run(`
+        UPDATE abrigos
+        SET qtd_desabrigados = 34
+        WHERE id = 4
+    `);
+
 
     return db;
 };
