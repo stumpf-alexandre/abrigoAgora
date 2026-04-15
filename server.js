@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
     `);
 }); 
 
+app.get('/abrigos', async (req, res) => {
+    const db = await criarBanco();
+    const listaAbrigos = await db.all(`SELECT * FROM abrigos`);
+    res.json(listaAbrigos);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
