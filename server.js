@@ -5,6 +5,16 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send(`
+        <body>
+            <h1>Abrigo Agora</h1>
+            <h2>Listagem de abrigos e suas vagas</h2>
+            <p>Endpoint que leva aos abrigos cadastrados localmente: <a href="http://localhost:${PORT}/abrigos">/abrigos</a></p>
+            <p>Endpoint que leva aos abrigos cadastrados localmente: <a href="http://localhost:${PORT}/abrigos/4">/abrigos especificos</a></p>
+        </body>
+    `);
+}); 
 
 const PORT = process.env.PORT || 3000;
 
