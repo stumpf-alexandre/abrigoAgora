@@ -40,6 +40,12 @@ const criarBanco = async() => {
     `);
     console.table(todosAbrigos);
 
+    const abrigoEspecifico = await db.all(`
+        SELECT * FROM abrigos
+        WHERE nome_abrigo = "Colégio Padre Réus"
+    `);
+    console.table(abrigoEspecifico);
+
 
     return db;
 };
