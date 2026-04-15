@@ -59,6 +59,16 @@ const criarBanco = async() => {
         WHERE id = 4
     `);
 
+    await db.run(`
+        DELETE FROM abrigos
+        WHERE id = 1    
+    `);
+    console.log(`Abrigo do ID 1 removido`);
+
+    const abrigosAtualizados = await db.all(`
+        SELECT * FROM abrigos    
+    `);
+    console.table(abrigosAtualizados);
 
     return db;
 };
