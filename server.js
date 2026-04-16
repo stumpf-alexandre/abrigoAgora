@@ -1,5 +1,6 @@
 const express = require('express');
 const {criarBanco} = require('./database');
+
 const app = express();
 
 app.use(express.json());
@@ -19,6 +20,16 @@ app.get('/abrigos', async(req, res) => {
     const db = await criarBanco();
     const listaAbrigos = await db.all(`SELECT * FROM abrigos`);
     res.json(listaAbrigos);
+});
+
+app.get('/abrigos/:id', async(req, res) => {
+    const {id} = req.params;
+    const db = await criarBanco();
+    const abrigoEspecifico = await db.all(`
+        SELECT * FROM abrigos WHERE id = ?    
+    `, [id]);
+
+    res.json(abrigoEspecifico);
 });
 
 const PORT = process.env.PORT || 3000;
