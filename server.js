@@ -42,6 +42,18 @@ app.post('/abrigos', async(req, res) => {
     res.send(`Novo abrigo: ${nome_abrigo}, cadastrado com ${vagas_abrigo} números de vagas disponíveis`);
 });
 
+app.put('/abrigos/:id', async(req, res) => {
+    const {id} =req.params;
+    const {qtd_desabrigado, pet} = req.body;
+    const db = await criarBanco();
+    await db.run(`
+        UPDATE abrigos
+        SET qtd_desabrigado = ?, pet = ?
+        WHERE id = ?
+    `, [qtd_desabrigado, pet, id]);
+    res.send(`Quantidade de vaga atualizada para o abrigo de id ${id}`);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
