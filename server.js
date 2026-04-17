@@ -54,6 +54,15 @@ app.put('/abrigos/:id', async(req, res) => {
     res.send(`Quantidade de vaga atualizada para o abrigo de id ${id}`);
 });
 
+app.delete('/abrigos/:id', async(req, res) => {
+    const {id} = req.params;
+    const db = await criarBanco();
+    await db.run(`
+        DELETE FROM abrigos WHERE id = ?
+    `, [id]);
+    res.send(`O abrigo de id ${id}, foi removido com sucesso`);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
