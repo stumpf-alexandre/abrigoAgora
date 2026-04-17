@@ -32,6 +32,16 @@ app.get('/abrigos/:id', async(req, res) => {
     res.json(abrigoEspecifico);
 });
 
+app.post('/abrigos', async(req, res) => {
+    const {nome_abrigo, endereco_abrigo, vagas_abrigo, genero, acessibilidade} = req.body;
+    const db = await criarBanco();
+    await db.run(`
+        INSERT INTO abrigos(nome_abrigo, endereco_abrigo, vagas_abrigo, genero, acessibilidade) VALUES (?, ?, ?, ?, ?)
+    `, [nome_abrigo, endereco_abrigo, vagas_abrigo, genero, acessibilidade]);
+
+    res.send(`Novo abrigo: ${nome_abrigo}, cadastrado com ${vagas_abrigo} números de vagas disponíveis`);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
