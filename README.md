@@ -78,7 +78,7 @@ database.db
 
 ## 🔗 Endpoints
 
-### Rota Inicial
+## Rota Inicial
 
 ```http
 GET /
@@ -93,6 +93,11 @@ GET /abrigos
 ```
 Retorna todos os registros do banco de dados
 
+#### Imagem usando uma rota GET
+
+![](./img/get.png)
+
+---
 
 ### Rota para buscar um abrigo específico (ID)
 
@@ -102,6 +107,12 @@ GET /abrigos/:id
 Ex.: /abrigos/1
 
 Retorna um abrigo específico.
+
+#### Imagem usando uma rota GET, especifico pelo ID, usado no POSTMAN
+
+![](./img/get_especifico.png)
+
+---
 
 
 ### Rota para criar um novo abrigo
@@ -114,10 +125,18 @@ POST /abrigos
 
 ```json
   {
-    
-  }
+    "nome_abrigo": "Escola CADOP",
+    "endereco_abrigo": "Praça da liberdade, Bairro Centro, 210",
+    "vagas_abrigo": 1200,
+    "genero": "Mulheres com ou sem crianças",
+    "acessibilidade": "acessibilidade comunicacional"
+}
 ```
+#### Imagem usando uma rota POST
 
+![](./img/post.png)
+
+---
 
 ### Rota para atualizar um abrigo
 
@@ -129,15 +148,28 @@ PUT /abrigos/:id
 
 ```json
   {
-    
+    "descricao": "Buraco na calçada",
+    "prioridade": "Urgente",
+    "status_resolucao": "Em análise"
   }
 ```
+
+#### Imagem usando uma rota PUT
+
+![](./img/put.png)
+
+---
 
 ### Rota para deletar um abrigo
 
 ```http
 DELETE /abrigos/:id
 ```
+
+#### Imagem usando uma rota DELETE
+
+![](./img/delete.png)
+
 ---
 
 ## 🔐 Segurança
@@ -163,6 +195,12 @@ Isso evita o SQL Injection
 ## 👩‍💻 Projeto Educacional
 
 Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js e front-end com React.js, por Alexandre. Segue o link do deploy feito para esta API **[Abrigo Agora]()**.
+
+---
+
+#### Imagem apos ter feito as modificações
+
+![](./img/navegador.png)
 
 ---
 
@@ -194,14 +232,14 @@ Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js e
   * Na pasta package.json, vai estar assim:
   ```
   {
-    "name": "zelacidade",
-    "version": "1.0.0",
-    "description": "![](./img/1.jpg)",
-    "main": "index.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "dev": "nodemon server.js"
-    },
+  "name": "abrigoagora",
+  "version": "1.0.0",
+  "description": "Durante enchentes, a comunicação entre abrigos e desabrigados é ineficiente. Enquanto locais conhecidos (como escolas centrais) ficam superlotados rapidamente, abrigos periféricos ou menores permanecem com vagas ociosas. Isso gera deslocamentos perigosos, cansaço extremo e exposição desnecessária de famílias, pois não há uma base de dados centralizada e atualizada em tempo real.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
     ...
   }
 
