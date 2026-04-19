@@ -12,8 +12,10 @@ app.get('/', (req, res) => {
         <body>
             <h1>Abrigo Agora</h1>
             <h2>Listagem de abrigos e suas vagas</h2>
-            <p>Endpoint que leva a lista de abrigos cadastrados: <a href="http://localhost:${PORT}/abrigos">/abrigos</a></p>
-            <p>Endpoint que leva a um abrigo especifico dependento do id: <a href="http://localhost:${PORT}/abrigos/4">/abrigo id = 4</a></p>
+            <p>Endpoint que leva a lista de abrigos cadastrados localmente: <a href="http://localhost:${PORT}/abrigos">/abrigos</a></p>
+            <p>Endpoint que leva a um abrigo especifico dependento do id localmente: <a href="http://localhost:${PORT}/abrigos/4">/abrigo id = 4</a></p>
+            <p>Endpoint que leva a lista de abrigos cadastrados via render: <a href="https://abrigoagora.onrender.com/abrigos">/abrigos</a></p>
+            <p>Endpoint que leva a um abrigo especifico dependento do id via render: <a href="https://abrigoagora.onrender.com/abrigos/4">/abrigo id = 4</a></p>
         </body>    
     `);
 });
