@@ -76,3 +76,5 @@ const criarBanco = async() => {
 };
 
 module.exports = {criarBanco};
+
+criarBanco();
