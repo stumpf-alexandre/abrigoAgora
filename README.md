@@ -247,9 +247,9 @@ Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js e
   Para ficar assim:
   ```
   {
-    "name": "zelacidade",
+    "name": "abrigoagora",
     "version": "1.0.0",
-    "description": "![](./img/1.jpg)",
+    "description": "Durante enchentes, a comunicação entre abrigos e desabrigados é ineficiente. Enquanto locais conhecidos (como escolas centrais) ficam superlotados rapidamente, abrigos periféricos ou menores permanecem com vagas ociosas. Isso gera deslocamentos perigosos, cansaço extremo e exposição desnecessária de famílias, pois não há uma base de dados centralizada e atualizada em tempo real.",
     "main": "index.js",
     "engines": {
       "node": "18.x"
